@@ -79,6 +79,7 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,52px);l
 /* vision & mission */
 .vm{background:var(--white)}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.vm h2{margin-bottom:clamp(32px,5vw,56px)}
 .vm h3{font-family:var(--display);font-weight:700;font-size:18px;color:var(--muted)}
 .vm .statement{margin-top:14px;font-family:var(--display);font-weight:800;font-size:clamp(26px,3.2vw,40px);line-height:1.1;letter-spacing:-.015em;max-width:16ch}
 .vm .body{margin-top:18px;color:#33363f;max-width:46ch}
@@ -119,7 +120,7 @@ footer .tagline{margin-top:10px;color:var(--white);font-family:var(--display);fo
   .hero{align-items:flex-end}
 }
 @media (max-width:900px){
-  .motif{position:static;transform:none;width:84px;margin:0 0 28px}
+  .motif{position:static;transform:none;width:84px;margin:0 auto 28px}
 }
 @media (min-width:600px) and (max-width:900px){
   .motif{width:104px}
@@ -150,9 +151,9 @@ h2{font-weight:700;letter-spacing:-.005em}
       <span>Linegon</span>
     </a>
     <nav aria-label="Principale">
-      <a class="link" href="#visione" data-i18n="nav_vm">Vision e Mission</a>
+      <a class="link" href="#visione" data-i18n="nav_vm">Il nostro approccio</a>
       <a class="link" href="#tecnologia" data-i18n="nav_tech">Tecnologia</a>
-      <a class="link" href="#approccio" data-i18n="nav_how">Approccio</a>
+      <a class="link" href="#approccio" data-i18n="nav_how">Come lavoriamo</a>
       <a class="link" href="#contatti" data-i18n="nav_contact">Contatti</a>
       <div class="lang" role="group" aria-label="Lingua / Language">
         <button type="button" data-lang="it" aria-pressed="true">IT</button>
@@ -188,14 +189,15 @@ h2{font-weight:700;letter-spacing:-.005em}
 
   <section id="visione" class="vm">
     <div class="wrap">
+      <h2 data-i18n="vm_title">Il nostro approccio</h2>
       <div class="cols">
         <div>
-          <h3 data-i18n="vision_h">La nostra Vision</h3>
+          <h3 data-i18n="vision_h">Dove vogliamo arrivare</h3>
           <p class="statement" data-i18n="vision_s">Un mondo in cui ogni impresa può diventare agentica.</p>
           <p class="body" data-i18n="vision_p">Immaginiamo organizzazioni in cui persone e agenti digitali lavorano insieme. La tecnologia amplifica le competenze umane e rende l'innovazione accessibile a ogni impresa.</p>
         </div>
         <div>
-          <h3 data-i18n="mission_h">La nostra Mission</h3>
+          <h3 data-i18n="mission_h">Cosa facciamo</h3>
           <p class="statement" data-i18n="mission_s">Trasformare il potenziale agentico in valore per le imprese.</p>
           <p class="body" data-i18n="mission_p">Affianchiamo aziende, consulenti e partner tecnologici nel percorso di trasformazione, dalla strategia all'implementazione, per rendere il cambiamento concreto, misurabile e sostenibile.</p>
         </div>
@@ -281,13 +283,13 @@ const PRODUCTS = [
 const I18N = {
   it: {
     title:"Linegon — Your Agentic Transformation Partner",
-    nav_vm:"Vision e Mission", nav_tech:"Tecnologia", nav_how:"Approccio", nav_contact:"Contatti",
+    nav_vm:"Il nostro approccio", nav_tech:"Tecnologia", nav_how:"Come lavoriamo", nav_contact:"Contatti",
     hero_t1:"Il futuro delle imprese è agentico.", hero_t2:"Costruiamolo insieme.",
     hero_lead:"Accompagniamo aziende, consulenti e partner tecnologici verso un nuovo modello d'impresa, dove persone e agenti digitali collaborano per innovare i processi, migliorare le performance e creare valore.",
     cta_product:"Scopri TeraBrain NX", cta_contact:"Contattaci", first_label:"Il nostro primo prodotto",
-    vision_h:"La nostra Vision", vision_s:"Un mondo in cui ogni impresa può diventare agentica.",
+    vm_title:"Il nostro approccio", vision_h:"Dove vogliamo arrivare", vision_s:"Un mondo in cui ogni impresa può diventare agentica.",
     vision_p:"Immaginiamo organizzazioni in cui persone e agenti digitali lavorano insieme. La tecnologia amplifica le competenze umane e rende l'innovazione accessibile a ogni impresa.",
-    mission_h:"La nostra Mission", mission_s:"Trasformare il potenziale agentico in valore per le imprese.",
+    mission_h:"Cosa facciamo", mission_s:"Trasformare il potenziale agentico in valore per le imprese.",
     mission_p:"Affianchiamo aziende, consulenti e partner tecnologici nel percorso di trasformazione, dalla strategia all'implementazione, per rendere il cambiamento concreto, misurabile e sostenibile.",
     facts:"Linegon nasce a Verona nel 2025 dall'esperienza del progetto TeraBrain. Il team lavora con AI, ERP e networking avanzato da prima del 2000 e, dal 2016, con l'Università di Verona su Machine Learning e reti neurali.",
     prod_title:"La tecnologia che abilita l'impresa agentica.", prod_intro:"Le piattaforme che sviluppiamo, ciascuna con il proprio sito.",
@@ -304,13 +306,13 @@ const I18N = {
   },
   en: {
     title:"Linegon — Your Agentic Transformation Partner",
-    nav_vm:"Vision & Mission", nav_tech:"Technology", nav_how:"Approach", nav_contact:"Contact",
+    nav_vm:"Our approach", nav_tech:"Technology", nav_how:"How we work", nav_contact:"Contact",
     hero_t1:"The future of business is agentic.", hero_t2:"Let's build it together.",
     hero_lead:"We guide companies, consultants and technology partners toward a new business model, where people and digital agents work together to innovate processes, improve performance and create value.",
     cta_product:"Discover TeraBrain NX", cta_contact:"Contact us", first_label:"Our first product",
-    vision_h:"Our Vision", vision_s:"A world where every company can become agentic.",
+    vm_title:"Our approach", vision_h:"Where we are heading", vision_s:"A world where every company can become agentic.",
     vision_p:"We imagine organizations where people and digital agents work side by side. Technology amplifies human skills and puts innovation within reach of every business.",
-    mission_h:"Our Mission", mission_s:"Turning agentic potential into value for companies.",
+    mission_h:"What we do", mission_s:"Turning agentic potential into value for companies.",
     mission_p:"We support companies, consultants and technology partners on their transformation journey, from strategy to implementation, making change concrete, measurable and sustainable.",
     facts:"Linegon was founded in Verona in 2025, building on the TeraBrain project. Our team has worked with AI, ERP and advanced networking since before 2000, and since 2016 with the University of Verona on Machine Learning and neural networks.",
     prod_title:"The technology that enables the agentic company.", prod_intro:"The platforms we build, each with its own website.",
