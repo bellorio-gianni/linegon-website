@@ -343,8 +343,7 @@ function renderProducts(){
       <div class="tag">${p.tag[lang]}</div>
       <p>${p.text[lang]}</p>
       <a class="btn" href="${productHref(p)}"${target}>${p.cta[lang]}</a>
-    </article>`).join("") + `
-    <div class="slot"><strong>${t.slot_t}</strong>${t.slot_p}</div>`;
+    </article>`).join("");
 }
 
 function applyLang(){
