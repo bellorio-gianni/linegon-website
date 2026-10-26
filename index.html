@@ -64,7 +64,7 @@ header{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(9,9,11,.82);ba
 .hero .first span{color:var(--muted-dark);font-size:15px}
 .hero .first a{font-family:var(--display);font-weight:700;font-size:22px;color:var(--white);text-decoration:none;border-bottom:2px solid var(--accent)}
 .hero .first a:hover{border-color:var(--white)}
-.motif{position:absolute;z-index:1;right:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)));top:50%;width:min(24vw,300px);transform:translateY(-50%);pointer-events:none}
+.motif{position:absolute;right:var(--gutter);top:50%;width:min(24vw,300px);transform:translateY(-50%);pointer-events:none}
 .motif path,.motif polygon{fill:none;stroke:#fff;stroke-linejoin:miter;stroke-linecap:butt;stroke-width:9}
 .motif .c{stroke-opacity:.85;stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.8s .15s cubic-bezier(.2,.7,.2,1) forwards}
 .motif .c:nth-of-type(2){animation-delay:.35s}.motif .c:nth-of-type(3){animation-delay:.55s}.motif .c:nth-of-type(4){animation-delay:.75s}
@@ -116,8 +116,14 @@ footer .tagline{margin-top:10px;color:var(--white);font-family:var(--display);fo
   .cols{grid-template-columns:1fr}
   .row{grid-template-columns:1fr;gap:6px}
   .bar nav a.link{display:none}
-  .motif{width:34vw;max-width:150px;right:var(--gutter);top:96px;transform:none}
   .hero{align-items:flex-end}
+}
+@media (max-width:900px){
+  .motif{position:static;transform:none;width:84px;margin:0 0 28px}
+}
+@media (min-width:600px) and (max-width:900px){
+  .motif{width:104px}
+  .hero{align-items:center}
 }
 @media (max-width:420px){
   .brand span{display:none}
@@ -159,6 +165,7 @@ h2{font-weight:700;letter-spacing:-.005em}
 
 <main id="top">
   <div class="hero">
+    <div class="wrap">
     <svg class="motif" viewBox="0 0 400 440" aria-hidden="true">
       <polygon class="h" points="200,14 378,116 378,324 200,426 22,324 22,116"/>
       <path class="c" d="M70 190 L200 112 L330 190"/>
@@ -166,7 +173,6 @@ h2{font-weight:700;letter-spacing:-.005em}
       <path class="c" d="M70 294 L200 216 L330 294"/>
       <path class="c" d="M70 346 L200 268 L330 346"/>
     </svg>
-    <div class="wrap">
       <h1><b data-i18n="hero_t1" style="font-weight:inherit">Il futuro delle imprese è agentico.</b> <span data-i18n="hero_t2">Costruiamolo insieme.</span></h1>
       <p class="lead" data-i18n="hero_lead">Accompagniamo aziende, consulenti e partner tecnologici verso un nuovo modello d'impresa, dove persone e agenti digitali collaborano per innovare i processi, migliorare le performance e creare valore.</p>
       <div class="cta">
